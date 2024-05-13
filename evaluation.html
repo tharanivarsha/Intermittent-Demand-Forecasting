@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 15px;
+      }
+      h2 {
+        text-align: center;
+        font-size: 15px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+      }
+      table.center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PRODUCT ID: {{item}}</h1>
+    <h2>STORE ID: {{store}}</h2>
+    <table class="center">
+      <tr>
+        <th>Day</th>
+        <th>Sales</th>
+      </tr>
+      {% for val in x %}
+
+      <tr>
+        <td>Day {{loop.index}}</td>
+        <td>{{val}}</td>
+      </tr>
+
+      {% endfor %}
+    </table>
+  </body>
+</html>
